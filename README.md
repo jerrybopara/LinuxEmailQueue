@@ -50,4 +50,28 @@ BackupDir="/MySql_SSD/MySql_Backup" # Location where Script store the all db's b
 MAINMYSQL_DIR="/var/lib/mysql" # Current default location of MySql data Directory.
 ```
 
-2. - 
+2. - Taking an backup of all db's, before making any change. 
+```
+# Taking Backup of current DB.
+mkdir -p $NewMySqlDir
+echo  "==> Taking all MySql DB's Backup."
+mkdir -p $BackupDir
+$MYSQLDUMP --all-databases | gzip > "$BackupDir"/"alldbs_before_moving_mysql.sql.gz"
+```
+
+3. - Stopping MySql Service, So that we can properly copy the mysql directory to the new destination.
+```
+# Stop MySql Service 
+$SYSTEMCTL stop mysql.service
+``` 
+
+4. - Syncing the MySql Default Directory with the new location.
+```
+# Sync when mysql is off.
+$RSYNC -av "$MAINMYSQL_DIR" "$NewMySqlDir"
+$CHOWN -R mysql:mysql "$NewMySqlDir"/mysql
+```
+
+5. - 
+```
+```

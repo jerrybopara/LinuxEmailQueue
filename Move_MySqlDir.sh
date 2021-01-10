@@ -35,7 +35,6 @@ $MYSQLDUMP --all-databases | gzip > "$BackupDir"/"alldbs_before_moving_mysql.sql
 $SYSTEMCTL stop mysql.service
 
 # Sync when mysql is off.
-# $RSYNC -av "$OLDMYSQL_DIR1" "$NewMySqlDir"
 $RSYNC -av "$MAINMYSQL_DIR" "$NewMySqlDir"
 $CHOWN -R mysql:mysql "$NewMySqlDir"/mysql
 
