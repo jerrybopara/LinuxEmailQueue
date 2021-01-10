@@ -7,7 +7,7 @@
 # user=username
 # password=password
 
-MySqlConf="/etc/mysql/mysql.conf.d/mysqld.cnf"
+# MySqlConf="/etc/mysql/mysql.conf.d/mysqld.cnf"
 
 MYSQL=$(which mysql)
 MYSQLDUMP=$(which mysqldump)
