@@ -89,5 +89,7 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 ```
 
 ### *KEYNOTES*
-1. - 
+1. - There are 2 approaches to migrate MySql Data Directory.
+	- Following the Symlink approach. 
+	- Updating the MySql Data DIrectory Path in - my.cnf OR mysqld.cnf, as per the OS. 
 
