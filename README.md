@@ -88,3 +88,6 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 
 ```
 
+### *KEYNOTES*
+1. - 
+
