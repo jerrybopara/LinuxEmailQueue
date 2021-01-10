@@ -97,7 +97,7 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 2. - If you going to follow the 2nd approach. Here's the few things you've take care off. 
      - `Run the script till step 5, and comment out the further symlink stuff and run the follwing commands.` 
 
-     - Update the AppArmor Access Control Rules.
+     - Update the `AppArmor Access Control` Rules.
 
      ```
      - Making Change at Apparmor - in ubuntu
