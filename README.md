@@ -2,7 +2,7 @@
 
 ## *INTRODUCTION*
 
-### In this post we going to discuss about migrating OR relocating MySql data directory to another location than the default one. 
+### In this post we going to discuss about `migrating OR relocating` MySql data directory to another location than the default one. 
 
 #### - You may need to migrate/relocate the data directory, when your MySql growing so fast and there are more chances to go out of disk space anytime. 
 
@@ -21,7 +21,7 @@
 	 DISTRIB_DESCRIPTION="Ubuntu 18.04.4 LTS"
    ```	
 
-   - Keep an MySql Credentials with you. I've configured my ~/.my.cnf. 
+   - Keep an MySql Credentials with you. I've configured my `~/.my.cnf`. 
    ```
    $ vim ~/.my.cnf
     [client]
@@ -97,9 +97,18 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 2. - If you going to follow the 2nd approach. Here's the few things you've take care off. 
      - `Run the script till step 5, and comment out the further symlink stuff and run the follwing commands.` 
 
-     ```
-     # Making Changes in MySqld.conf
+     - Update the AppArmor Access Control Rules.
 
+     ```
+     - Making Change at Apparmor - in ubuntu
+
+	 $ echo "alias /var/lib/mysql/ -> /MySql_SSD/MySqlDIR/mysql/," >> /etc/apparmor.d/tunables/alias
+     
+     ```
+
+     - Pointing MySql to new location & updating the Changes in MySqld.conf
+
+     ```
      - Taking a backup of main mysql conf file.
 	 $ cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.bak
 
@@ -109,6 +118,5 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 
 	 - Just Using SED to replace the `/var/lib/mysql` with the new location `/MySql_SSD/MySqlDIR/mysql`
 	 $ sed -i "36 s/\/var\/lib\/mysql/\/MySql_SSD\/MySqlDIR\/mysql/" cat -n "/etc/mysql/mysql.conf.d/mysqld.cnf" | grep "datadir" | awk '{print $1}'
-
-
      ``` 
+
