@@ -95,4 +95,21 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 
 
 2. - If you going to follow the 2nd approach. Here's the few things you've take care off. 
-   - 
+     - Run the script till step 5, and comment out the further symlink stuff and run the follwing commands. 
+
+     - 
+     ```
+     # Making Changes in MySqld.conf
+
+     - Taking a backup of main mysql conf file.
+	 $ cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.bak
+
+	 - Collecting the line number of "datadir = /var/lib/mysql"
+	 $ cat -n "/etc/mysql/mysql.conf.d/mysqld.cnf" | grep "datadir" | awk '{print $1}') 
+
+
+	 - Just Using SED to replace the `/var/lib/mysql` with the new location `/MySql_SSD/MySqlDIR/mysql`
+	 $ sed -i "36 s/\/var\/lib\/mysql/\/MySql_SSD\/MySqlDIR\/mysql/" cat -n "/etc/mysql/mysql.conf.d/mysqld.cnf" | grep "datadir" | awk '{print $1}'
+
+
+     ``` 
