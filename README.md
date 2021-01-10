@@ -42,10 +42,12 @@
 
 ### Let's Get Started, Just get the script and make it executables, but before doing anything try to upderstand the all steps, it gonna perform.
 
-- Please Update below Variables, Before you execute the script.
+1. - Please Update below Variables, Before you execute the script.
 ```
 NewMySqlDir="/MySql_SSD/MySqlDIR/"  # Location where MySql will get moved.
 BackupDir="/MySql_SSD/MySql_Backup" # Location where Script store the all db's backup before any change.
 
 MAINMYSQL_DIR="/var/lib/mysql" # Current default location of MySql data Directory.
-```  
+```
+
+2. - 
