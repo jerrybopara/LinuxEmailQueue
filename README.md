@@ -104,6 +104,8 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 
 	 $ echo "alias /var/lib/mysql/ -> /MySql_SSD/MySqlDIR/mysql/," >> /etc/apparmor.d/tunables/alias
      
+     $ sudo systemctl restart apparmor
+
      ```
 
      - Pointing MySql to new location & updating the Changes in MySqld.conf
@@ -120,3 +122,9 @@ $SYSTEMCTL status mysql.service # If everything went well, You'll see the servic
 	 $ sed -i "36 s/\/var\/lib\/mysql/\/MySql_SSD\/MySqlDIR\/mysql/" cat -n "/etc/mysql/mysql.conf.d/mysqld.cnf" | grep "datadir" | awk '{print $1}'
      ``` 
 
+     - Once above 2 changes are done, let's restart the MySql. 
+      
+     ```
+     sudo systemctl restart mysql
+	 sudo systemctl status mysql
+     ```
