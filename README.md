@@ -21,7 +21,19 @@
 	 DISTRIB_DESCRIPTION="Ubuntu 18.04.4 LTS"
    ```	
 
-   - Keep an MySql Credentials with you. 
+   - Keep an MySql Credentials with you. I've configured my ~/.my.cnf. 
+   ```
+   $ vim ~/.my.cnf
+    [client]
+	user=username
+	password=password
+   ```	 
+   - Get the current MySql Directory. 
+   ```
+   $ mysql -e 'select @@datadir;' | grep -v '|' | tail -n1 | sed 's:/*$::'
+     /var/lib/mysql
+   ```
+
    - Make sure you've sudo user access of the server. 
 
 2.  
