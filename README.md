@@ -12,8 +12,16 @@
 
 ### *PREREQUISITES*
 1. Collect the Basic information about your Setup. 
-   - Check your Installed OS. 
+   - Check your Installed OS & Its version.
+   ```
+   $ cat /etc/lsb-release 
+   	 DISTRIB_ID=Ubuntu
+	 DISTRIB_RELEASE=18.04
+	 DISTRIB_CODENAME=bionic
+	 DISTRIB_DESCRIPTION="Ubuntu 18.04.4 LTS"
+   ```	
+
    - Keep an MySql Credentials with you. 
    - Make sure you've sudo user access of the server. 
 
-2.      
+2.  
