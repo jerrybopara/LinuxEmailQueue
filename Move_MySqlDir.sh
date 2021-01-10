@@ -20,8 +20,10 @@ CP=$(which cp)
 NewMySqlDir="/MySql_SSD/MySqlDIR/"
 BackupDir="/MySql_SSD/MySql_Backup"
 
-OLDMYSQL_DIR=$($MYSQL -e 'select @@datadir;' | grep -v '|' | tail -n1 | sed 's:/*$::')
-MAINMYSQL_DIR="$OLDMYSQL_DIR"
+# OLDMYSQL_DIR=$($MYSQL -e 'select @@datadir;' | grep -v '|' | tail -n1 | sed 's:/*$::')
+# MAINMYSQL_DIR="$OLDMYSQL_DIR"
+
+MAINMYSQL_DIR="/var/lib/mysql"
 
 # Taking Backup of current DB.
 mkdir -p $NewMySqlDir
