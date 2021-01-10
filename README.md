@@ -39,3 +39,5 @@
 2. I recommend you to migrate MySql Data Directory to the disks's which having good I/O rate. 
 
 3. In this Guide, I'm Migrating MySql to my LVM `/dev/MYSQL_VG1/MYSQL_VG1`.
+
+### Let's Get Started, Just get the script and make it executables, but before doing anything try to upderstand the all steps, it gonna perform.  
