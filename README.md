@@ -10,7 +10,7 @@
 
 #### - Or due to some security issues we want to move MySql to a seprate location.
 
-### *PREREQUISITES*
+### *PREREQUISITES OR RECOMMENDATIONS*
 1. Collect the Basic information about your Setup. 
    - Check your Installed OS & Its version.
    ```
@@ -36,4 +36,6 @@
 
    - Make sure you've sudo user access of the server. 
 
-2.  
+2. I recommend you to migrate MySql Data Directory to the disks's which having good I/O rate. 
+
+3. In this Guide, I'm Migrating MySql to my LVM `/dev/MYSQL_VG1/MYSQL_VG1`.
