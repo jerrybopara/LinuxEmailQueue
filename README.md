@@ -2,13 +2,12 @@
 
 ## Use Cases 
 
-```
-- In this post we going to discuss about migrating OR relocating MySql data directory to another location than the default one. 
 
-* You may need to migrate/relocate the data directory, when your MySql growing so fast and there are more chances to go out of disk space anytime. 
+### - In this post we going to discuss about migrating OR relocating MySql data directory to another location than the default one. 
 
-* You may Need to Relocate MySql due to performance issues. Usally when you have your MySql running at the default location & disk, so there are more chances that you will face I/O bassed Issues. 
+### * You may need to migrate/relocate the data directory, when your MySql growing so fast and there are more chances to go out of disk space anytime. 
 
-*  
+### * You may Need to Relocate MySql due to performance issues. Usally when you have your MySql running at the default location & disk, so there are more chances that you will face I/O bassed Issues. 
 
-```
+### *  
+
