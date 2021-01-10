@@ -72,6 +72,10 @@ $RSYNC -av "$MAINMYSQL_DIR" "$NewMySqlDir"
 $CHOWN -R mysql:mysql "$NewMySqlDir"/mysql
 ```
 
-5. - 
+5. - Taking an a backup of Main Default MySql data directory. So that if anything goes wrong we can restore our MySql.
 ```
+# Renaming the MySql Directory. 
+$MV "$MAINMYSQL_DIR" "$MAINMYSQL_DIR"_Bak
 ```
+
+6. - 
