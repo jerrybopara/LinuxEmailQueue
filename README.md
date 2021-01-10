@@ -78,4 +78,13 @@ $CHOWN -R mysql:mysql "$NewMySqlDir"/mysql
 $MV "$MAINMYSQL_DIR" "$MAINMYSQL_DIR"_Bak
 ```
 
-6. - 
+6. - In this Script I'm using an approach where I'm creating an Symlink of new location with the same name/location of default MySql Data Directory.
+```
+# Creating Symlink - of new mysql dir with /var/lib/mysql
+ln -s "$NewMySqlDir"/mysql $MAINMYSQL_DIR
+
+$SYSTEMCTL start mysql.service  # Just Restarting the service back.
+$SYSTEMCTL status mysql.service # If everything went well, You'll see the service is up & running.
+
+```
+
