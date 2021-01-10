@@ -11,5 +11,9 @@
 #### - Or due to some security issues we want to move MySql to a seprate location.
 
 ### *PREREQUISITES*
-- Collect the Basic information about your Setup. 
--  
+1. Collect the Basic information about your Setup. 
+   - Check your Installed OS. 
+   - Keep an MySql Credentials with you. 
+   - Make sure you've sudo user access of the server. 
+
+2.      
